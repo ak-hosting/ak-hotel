@@ -1,0 +1,53 @@
+# AK Hotel - Docker Compose Yapılandırması
+# Hızlı başlatma için Docker Compose dosyası
+
+version: '3.8'
+
+services:
+  ak-hotel:
+    build: .
+    ports:
+      - "3000:80"
+    container_name: ak-hotel
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./assets:/usr/share/nginx/html/assets:ro
+    networks:
+      - ak-hotel-network
+
+  # Gelecekte backend için (opsiyonel)
+  # backend:
+  #   image: node:18-alpine
+  #   working_dir: /app
+  #   volumes:
+  #     - ./backend:/app
+  #   ports:
+  #     - "3000:3000"
+  #   environment:
+  #     - NODE_ENV=development
+  #   depends_on:
+  #     - database
+  #   networks:
+  #     - ak-hotel-network
+
+  # Gelecekte veritabanı için (opsiyonel)
+  # database:
+  #   image: postgres:15-alpine
+  #   environment:
+  #     POSTGRES_DB: ak_hotel
+  #     POSTGRES_USER: ak_hotel_user
+  #     POSTGRES_PASSWORD: your_password
+  #   volumes:
+  #     - postgres_data:/var/lib/postgresql/data
+  #   networks:
+  #     - ak-hotel-network
+
+networks:
+  ak-hotel-network:
+    driver: bridge
+
+# Gelecekte veritabanı için (opsiyonel)
+# volumes:
+#   postgres_data: 
