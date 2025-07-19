@@ -6,7 +6,7 @@
 
 Kuşadası'ndaki elit butik oteller için ücretsiz, SEO dostu ve mobil uyumlu web sitesi şablonu. Bootstrap 5 ile geliştirildi, birkaç saniyede klonlayıp çalıştırabilirsiniz!
 
-**[🚀 Canlı Demo](https://ak-hosting.github.io/ak-hotel/)** | **[📧 Destek İletişimi](mailto:ak@ak-pro.com)**
+**[🚀 Canlı Demo](https://ak-hosting.github.io/ak-hotel/)** | **[📧 Destek İletişimi](mailto:ak@ak-pro.com)** | **[📦 GitHub Repository](https://github.com/ak-hosting/ak-hotel)**
 
 ## 🌟 Özellikler
 
@@ -51,6 +51,12 @@ Kuşadası'ndaki elit butik oteller için ücretsiz, SEO dostu ve mobil uyumlu w
 ### 1. Depoyu Klonlayın
 ```bash
 git clone https://github.com/ak-hosting/ak-hotel.git
+cd ak-hotel
+```
+
+**Veya SSH ile:**
+```bash
+git clone git@github.com:ak-hosting/ak-hotel.git
 cd ak-hotel
 ```
 
